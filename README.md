@@ -35,3 +35,28 @@ Code: function getPrice() {
 }
 
 Expected output: 12
+
+Describe: pushValues() 
+
+Test: Checks checked values of toppings.
+
+Code: function pushValues("cheese") {
+  for (let i of toppings) {
+    if (i.checked) {
+    return i.value;
+    }
+  }
+
+Expected output: cheese;
+
+Test: Pushes topping values into empty array.
+
+Code: function pushValues("Cheese") {
+  let toppingSelection = [];
+  for (let i of toppings) {
+    if (i.checked) {
+    toppingSelection.push(i.value);
+    }
+  }
+
+Expected Output: ["Cheese"]

@@ -6,7 +6,6 @@ function Pizza(size, toppings, price) {
 
 function gatherInfo(event) {
   event.preventDefault();
-  let toppingSelection = [];
   let size = document.querySelector("input[name='size']:checked").value;
   let toppings = document.getElementsByName("toppings");
   
@@ -14,7 +13,8 @@ function gatherInfo(event) {
   getPrice();
 }
 
-function pushValues(toppings, size, toppingSelection) {
+function pushValues(toppings, size) {
+  let toppingSelection = [];
   for (let i of toppings) {
     if (i.checked) {
     toppingSelection.push(i.value);
