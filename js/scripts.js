@@ -8,11 +8,14 @@ function Pizza(size, toppings, price) {
 
 Pizza.prototype.fullCost = function() {
   let price = 10;
+  
   if (this.size === "large") {
     price += 2;
   }
+
   price += this.toppings.length;
   this.price = price;
+
   if (this.toppings.length === 0) {
     return "Your " + this.size + " pizza with" + " no toppings" + " costs $" + this.price;
   } else {
