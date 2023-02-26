@@ -17,7 +17,16 @@ function gatherInfo(event) {
 
   pizza.toppings = toppingSelection;
   pizza.size = size;
-  console.log(toppings + " " + size);
+  
+  getPrice();
+}
+
+function getPrice() {
+  let price = 10;
+  if (pizza.size === "large") {
+    price += 2;
+    console.log(price);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
