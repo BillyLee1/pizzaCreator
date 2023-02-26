@@ -1,3 +1,6 @@
+let pizza = new Pizza("", [], 0);
+
+
 function Pizza(size, toppings, price) {
   this.size = size;
   this.toppings = toppings;
@@ -15,15 +18,6 @@ Pizza.prototype.fullCost = function() {
   return "This " + this.size + " pizza with" + this.toppings + " costs $" + this.price;
 };
 
-function gatherInfo(event) {
-  event.preventDefault();
-  let size = document.querySelector("input[name='size']:checked").value;
-  let toppings = document.getElementsByName("toppings");
-  
-  pushValues(toppings, size);
-  pizza.fullCost();
-}
-
 function pushValues(toppings, size) {
   let toppingSelection = [];
   for (let i of toppings) {
@@ -36,10 +30,22 @@ function pushValues(toppings, size) {
   pizza.size = size;
 }
 
+function gatherInfo(event) {
+  event.preventDefault();
+  let size = document.querySelector("input[name='size']:checked").value;
+  let toppings = document.getElementsByName("toppings");
+  
+  pushValues(toppings, size);
+  pizza.fullCost();
+  priceStatement();
+}
+
+function priceStatement() {
+  let display = document.querySelector("#priceStatement");
+  display.innerText = pizza.fullCost();
+}
 
 document.addEventListener("DOMContentLoaded", function() {
   const submit = document.querySelector("#submit");
   submit.addEventListener("click", gatherInfo);
 });
-
-let pizza = new Pizza("", [], 0);
