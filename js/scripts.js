@@ -9,6 +9,12 @@ function gatherInfo(event) {
   let toppingSelection = [];
   let size = document.querySelector("input[name='size']:checked").value;
   let toppings = document.getElementsByName("toppings");
+  
+  pushValues(toppings, size, toppingSelection);
+  getPrice();
+}
+
+function pushValues(toppings, size, toppingSelection) {
   for (let i of toppings) {
     if (i.checked) {
     toppingSelection.push(i.value);
@@ -17,8 +23,6 @@ function gatherInfo(event) {
 
   pizza.toppings = toppingSelection;
   pizza.size = size;
-  
-  getPrice();
 }
 
 function getPrice() {
@@ -28,7 +32,7 @@ function getPrice() {
     console.log(price);
   }
   price += pizza.toppings.length;
-  console.log(price);
+  pizza.price = price;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
