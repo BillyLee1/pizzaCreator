@@ -25,3 +25,13 @@ Code: function getPrice () {
     price += 2;
   }
 }
+
+Expected output: 12;
+
+Test: Adds 1 to price for every topping that is selected. 2 toppings for this case.
+
+Code: function getPrice() {
+  price += pizza.toppings.length;
+}
+
+Expected output: 12

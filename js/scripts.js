@@ -27,6 +27,8 @@ function getPrice() {
     price += 2;
     console.log(price);
   }
+  price += pizza.toppings.length;
+  console.log(price);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
