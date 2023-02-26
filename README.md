@@ -1,4 +1,40 @@
-TDD:
+# _Billy's Pizza Parlor_
+
+#### By _**Billy Lee**_
+
+#### _A simple program to value a pizza created by a user based on toppings and size_
+
+## Technologies Used
+
+* _HTML_
+* _CSS_
+* _Javascript_
+* _VS Code_
+
+## Description
+
+_This is a simple program to value a pizza created by a user based on toppings and size. There are 7 toppings and 2 sizes. Each topping is worth 1 dollar. A medium size costs 10 dollars and a large costs 2 dollars more. The price and toppings will be displayed once the choices have been selected._
+
+## Setup/Installation Requirements
+
+* _Visit the repository this project is located in._
+* _Press the green code button and copy and the HTTPS link that ends with .git_
+* _Open up your gitbash and change the directory to where you want to clone this repository._
+* _in gitbash, type "git clone" and then paste the link you just copied._
+* _Lastly, open up the index.html in your web browser to view the pizzaCreator._
+
+## Known Bugs
+
+* No known bugs as of right now. Please notify me if you have found any bugs.
+
+
+## License
+
+_Please let me know if you see any bugs within this project. You can contact me through Discord or email me at codingbillylee@gmail.com_
+
+[Copyright](https://opensource.org/licenses/MIT) (c) _2023_ _Billy Lee_
+
+# TDD:
 Describe: Pizza(size, toppings);
 
 Test: The pizza object should return two properties of an array for toppings and a string for size.
