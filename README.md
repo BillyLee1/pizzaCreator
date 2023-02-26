@@ -6,11 +6,11 @@ Test: The pizza object should return two properties of an array for toppings and
 Code: const pizza = new Pizza("medium", ["cheese", "sausage"]);
 Expected Output: pizza {size: "medium", toppings: ["cheese", "sausage"]}
 
-Describe: getPrice();
+Describe: Pizza.prototype.fullCost = function() {
 
-Test: getPrice function should return the base 10 dollars for the medium pizza.
+Test: fullCost prototype function should return the base 10 dollars for the medium pizza.
 
-Code: function getPrice () {
+Code: Pizza.prototype.fullCost = function() {
   let price = 10;
   return price;
 }
@@ -19,7 +19,7 @@ Expected output: 10;
 
 Test: Changes price if pizza.size = large.
 
-Code: function getPrice () {
+Code: Pizza.prototype.fullCost = function() {
   let price = 10;
   if (pizza.size === "large") {
     price += 2;
@@ -30,7 +30,7 @@ Expected output: 12;
 
 Test: Adds 1 to price for every topping that is selected. 2 toppings for this case.
 
-Code: function getPrice() {
+Code: Pizza.prototype.fullCost = function() {
   price += pizza.toppings.length;
 }
 

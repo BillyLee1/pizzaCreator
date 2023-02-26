@@ -21,7 +21,7 @@ function gatherInfo(event) {
   let toppings = document.getElementsByName("toppings");
   
   pushValues(toppings, size);
-  getPrice();
+  pizza.fullCost();
 }
 
 function pushValues(toppings, size) {
@@ -36,15 +36,6 @@ function pushValues(toppings, size) {
   pizza.size = size;
 }
 
-function getPrice() {
-  let price = 10;
-  if (pizza.size === "large") {
-    price += 2;
-    console.log(price);
-  }
-  price += pizza.toppings.length;
-  pizza.price = price;
-}
 
 document.addEventListener("DOMContentLoaded", function() {
   const submit = document.querySelector("#submit");
